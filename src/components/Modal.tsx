@@ -1,8 +1,11 @@
 import { useState } from "react";
 import {
-  
+  //Modal,
+  //TextInput,
+  //NumberInput,
+  //Select,
   Button,
-  
+  //Stack,
 } from "@mantine/core";
 
 type AddExpenseModalProps = {
@@ -38,8 +41,8 @@ export default function AddExpenseModal({}: AddExpenseModalProps) {
   };
 
   // หากต้องการแปง type string เป็น type number สามารถดูตัวอย่างนี้ได้
-  let val_number: number = Number("500.0");
-  console.log(val_number + 100); // 600.0
+  // let val_number: number = Number("500.0");
+  // console.log(val_number + 100); // 600.0
 
   return (
     <>
