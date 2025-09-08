@@ -1,11 +1,8 @@
 import { useState } from "react";
 import {
-  Modal,
-  TextInput,
-  NumberInput,
-  Select,
+  
   Button,
-  Stack,
+  
 } from "@mantine/core";
 
 type AddExpenseModalProps = {
@@ -23,13 +20,58 @@ export default function AddExpenseModal({}: AddExpenseModalProps) {
   const [amount, setAmount] = useState<string | number>(0);
   const [category, setCategory] = useState<string | null>(null);
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    let ok = true;
+
+    if (name === "") {
+      setName("");
+      ok = false;
+    }
+    if (amount === "") {
+      setAmount("");
+      ok = false;
+    }
+    if (category === "") {
+      setCategory("");
+      ok = false;
+    }
+  };
 
   // หากต้องการแปง type string เป็น type number สามารถดูตัวอย่างนี้ได้
   let val_number: number = Number("500.0");
   console.log(val_number + 100); // 600.0
 
-  return {
-    /* Type additional text here. */
-  };
+  return (
+    <>
+      <div
+        className="modal fade"
+        id="modalregister"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabIndex={-1}
+        aria-labelledby="modalsubmitLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">Add Expense</h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Button
+        className="btn btn-success"
+        onClick={handleSubmit}
+      >
+        Submit
+      </Button>
+    </>
+  );
 }
