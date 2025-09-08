@@ -24,20 +24,6 @@ export default function AddExpenseModal({}: AddExpenseModalProps) {
   const [category, setCategory] = useState<string | null>(null);
 
   const handleSubmit = () => {
-    let ok = true;
-
-    if (name === "") {
-      setName("");
-      ok = false;
-    }
-    if (amount === "") {
-      setAmount("");
-      ok = false;
-    }
-    if (category === "") {
-      setCategory("");
-      ok = false;
-    }
   };
 
   // หากต้องการแปง type string เป็น type number สามารถดูตัวอย่างนี้ได้
