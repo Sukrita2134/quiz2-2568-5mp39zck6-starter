@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Button, Stack, Title, Divider, Container } from "@mantine/core";
 //import { v4 as uuidv4 } from "uuid";
 
-type Expense = {
-  id: string;
-  name: string;
-  amount: number | string;
-  category: string;
-};
+// type Expense = {
+//   id: string;
+//   name: string;
+//   amount: number | string;
+//   category: string;
+// };
 
 export default function ExpenseTracker() {
   // const [opened, setOpened] = useState(false);
